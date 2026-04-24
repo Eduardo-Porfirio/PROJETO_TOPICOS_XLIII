@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends gcc libpq-dev &
 # Instala o Django 3.1.4 diretamente ou via requirements.txt
 RUN pip install --upgrade pip
 RUN pip install django==3.1.4
+RUN pip install psycopg2-binary
 
 # Copia o seu código para dentro do contêiner
 COPY . .
